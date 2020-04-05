@@ -1,0 +1,24 @@
+@use '../../../scss/variables.scss';
+
+.header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90.6%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  &__nav {
+    
+  }
+}

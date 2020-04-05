@@ -2,12 +2,44 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Отель для котиков">
+    <meta name="author" content="Vladimir Mikhailov">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+    <title>Котейка</title>
+    <link rel="icon" href="<%=require('./blocks/common-blocks/header/images/cat-icon.png').default%>" sizes="any" type="image/png">
 </head>
 <body>
-    <h1>Hello world</h1>
-    <img src="<%=require('./images/cat.jpg').default%>" alt="кот">
-    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+ <div class="page-contanier">
+     <header class="header">
+         <div class="header__container">
+             <a class="link" href="index.html">
+                <img src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
+             </a>
+            <nav class="header__nav">
+              <div class="menu-bttn">
+                <div class="menu-bttn__dash"></div>
+              </div>
+            </nav>
+         </div>
+     </header>
+     <main>
+         <section class="title-page">
+             <div class="title-page__container">
+                <h3 class="title-page__city">Санкт-Петербург</h3>
+                <h1 class="title-page__title">Котейка</h1>
+                <h2 class="title-page__subtitle">Уютная гостиница для котов и кошек</h2>
+                <button class="check-in-button check-in-button_place_title-page">
+                  <div class="check-in-button__container">
+                    <span class="check-in-button__text">Забронировать</span> 
+                    <img  class="check-in-button__paw-pic" src="<%=require('./blocks/common-blocks/check-in-button/images/paw.svg').default%>" alt="лапа кота">
+                  </div>
+                </button>
+            </div>
+         </section>
+     </main>
+ </div>
+ <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
 </body>
 </html>

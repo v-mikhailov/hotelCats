@@ -1,0 +1,44 @@
+@use '../../../scss/variables.scss';
+
+.title-page {
+  padding-top: 50px;
+  padding-bottom: 231px;
+  background-image: url(../blocks/main/title-page/images/kitten.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 86.5%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__city {
+    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: variables.$base-color;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: 'RubikBold', Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    color: variables.$base-color;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+
+  &__subtitle {
+    font-size: 50px;
+    font-family: 'LatoWebMedium', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+
