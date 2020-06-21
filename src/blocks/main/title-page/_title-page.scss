@@ -1,0 +1,83 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.title-page {
+  padding-top: 50px;
+  padding-bottom: 231px;
+  background-image: url(../blocks/main/title-page/images/kitten.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mixins.for-tablet-up {
+    padding-top: 130px;
+    padding-bottom: 530px;
+    background-image: url(../blocks/main/title-page/images/mask-tablet.png), url(../blocks/main/title-page/images/kitten-tablet.jpg);
+  }
+
+  @include mixins.for-desktop-up  {
+    padding-top: 153px;
+    padding-bottom: 153px;
+    background-image: url(../blocks/main/title-page/images/kitten-desktop.jpg);
+    // background-image: url(../blocks/main/title-page/images/mask-desktop.png), url(../blocks/main/title-page/images/kitten-desktop.jpg);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 86.5%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mixins.for-tablet-up {
+      width: 45.5%;
+    }
+
+    @include mixins.for-desktop-up  {
+     align-items: flex-start;
+     width: 346px;
+     margin-left: 198px;
+     margin-right: 0;
+    }
+  }
+
+  &__city {
+    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: variables.$base-text-color;
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    @include mixins.for-tablet-up {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    font-family: 'RubikBold', Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    color: variables.$base-text-color;
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    @include mixins.for-tablet-up {
+      font-size: 62px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'LatoWebMedium', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    @include mixins.for-tablet-up {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+

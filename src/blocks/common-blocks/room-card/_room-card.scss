@@ -1,0 +1,107 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.room-card {
+  @include mixins.centerBlock(variables.$mobile-width);
+  margin-bottom: 30px;
+  background-color: variables.$card-backg;
+  border-radius: 8px;
+
+  &_type_sandwich {
+    @include mixins.for-tablet-up {
+      @include mixins.centerBlock(variables.$tablet-width);
+      width: variables.$tablet-width;
+    }
+  }
+
+
+  &_page_rooms {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 25px;
+    max-height: 192px;
+  }
+
+  &__container {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+
+    &_content_full {
+      padding-right: 20px;
+    }
+  }
+
+  &__class {
+    margin-top: 0;
+    font-family: "RubikMedium", Arial, Helvetica, sans-serif;
+    font-size: variables.$card-title-fz;
+  }
+
+  &__info {
+    padding-left: 17px;
+    margin-top: 0;
+    list-style-image: url('../blocks/common-blocks/room-card/images/ellipse.svg');
+    color: variables.$base-text-color;
+
+    &_descr_full {
+      display: flex;
+      flex-direction: column;
+      
+      padding-left: 0;
+      margin-bottom: 25px;
+      list-style: none;
+    }
+  }
+
+  &__parameter {
+    margin-bottom: 17px;
+
+    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
+    font-size: variables.$card-text-fz;
+    line-height: 140%;
+    color: variables.$base-text-color;
+    max-width: 145px;
+    margin-bottom: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_width_large {
+      font-size: 14px;
+      max-width: 245px;
+    }
+
+    &_style_margin {
+      margin-right: 12px;
+    }
+  }
+
+  &__heilight {
+    font-family: 'LatoWebMedium';
+    font-size: variables.$base-fz;
+  }
+
+  &__icons {
+    display: flex;
+    height: 18px;
+  }
+
+  &__icons-container {
+    display: flex;
+  }
+
+  &__icon {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}

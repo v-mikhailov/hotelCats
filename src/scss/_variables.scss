@@ -1,0 +1,37 @@
+$base-text-color: #1A212F; // основной текст
+$white-text-color: #FFFEFD; // белый текст в кнопке брони
+$hover-text-color: #E54D0B;
+$border-color: #EFEFEF;
+$footer-color: #8F8F8F;
+
+$block-backg: #fbfaf9; // фон секций
+$block-backg2: #FAC663;
+$card-backg: #FFF; // фон карточек
+$filter-bttn-backg: #fff;
+
+
+
+//кнопка брони
+$bttn-back-white: #FFFEFD; // белый фон для кнопки брони или иконки лапы / фон для фильр меню/попап
+$bttn-back-orange: #FF7236; // оранжевый фон для кнопки брони или иконки лапы
+$form-bttn-backg: #FAC663; // фон для кнопки формы
+$bttn-brd-rad: 25px; // радиус кнопки брони
+$base-fz: 18px;
+$card-title-fz: 20px;
+
+$card-text-fz: 15px;
+
+// 14пх для двух кнопок и брони на второй странице и формы
+// есть ещее 16пх в номере телефона для карточки и нижнего меню, заголовки фильр формы, текст в попап сенд
+// 12 пх для копирайта
+// 24px банер подзаголовко
+// 37пх хаголовк банер
+$benefit-card-brd-rad: 8px; // еще для карточкии отзывов
+
+
+$mobile-width: 90.6%;
+$tablet-width: 88.2%;
+$desktop-width: 85.9%;
+
+//tablet
+$menu-tablet-fz: 16px;

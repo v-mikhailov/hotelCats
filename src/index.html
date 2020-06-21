@@ -10,36 +10,325 @@
     <title>Котейка</title>
     <link rel="icon" href="<%=require('./blocks/common-blocks/header/images/cat-icon.png').default%>" sizes="any" type="image/png">
 </head>
-<body>
- <div class="page-contanier">
-     <header class="header">
-         <div class="header__container">
-             <a class="link" href="index.html">
-                <img src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
-             </a>
-            <nav class="header__nav">
-              <div class="menu-bttn">
-                <div class="menu-bttn__dash"></div>
-              </div>
-            </nav>
-         </div>
+<body class="body">
+  <div class="page-container">
+    <header class="header">
+      <div class="header__container">
+         <img class="logo" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
+        <div class="menu-bttn">
+          <div class="menu-bttn__dash"></div>
+        </div>
+        <nav class="menu menu_media_tablet-up">
+          <ul class="menu__list menu__list_direction_row">
+            <li class="menu__item menu__item_direction_row"><a href="#benefits" class="link">Почему мы?</a></li>
+            <li class="menu__item menu__item_direction_row"><a href="./catalog.html" class="link">Номера</a></li>
+            <li class="menu__item menu__item_direction_row"><a href="#feedback" class="link">Отзывы</a></li>
+            <li class="menu__item menu__item_direction_row"><a href="#location" class="link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
      </header>
+     <!-- перенести из верстки в js --> 
+     <aside class="sidebar">
+      <div class="sidebar__container">
+       <a class="link" href="index.html">
+         <img class="cat-logo cat-logo_place_sidebar" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
+       </a>
+       <nav class="menu">
+         <ul class="menu__list">
+           <li class="menu__item"><a href="#benefits" class="link">Почему мы?</a></li>
+           <li class="menu__item"><a href="./catalog.html" class="link">Номера</a></li>
+           <li class="menu__item"><a href="#feedback" class="link">Отзывы</a></li>
+           <li class="menu__item"><a href="#location" class="link">Контакты</a></li>
+         </ul>
+       </nav>
+       <span class="sidebar__tel">
+         <a class="link" href="tel:88003335599">8 (800) 333-55-99</a>
+       </span>
+       <nav class="social-media">
+         <h3 class="social-media__subtitle social-media__subtitle_place_sidebar">Социальные сети</h3>
+         <ul class="social-media__icons">
+           <li class="social-media__icon">
+             <a href="#">
+               <img src="<%=require('./blocks/common-blocks/location/images/insta.svg').default%>" alt="Иконка инстаграма">
+             </a>
+           </li>
+           <li class="social-media__icon">
+             <a href="#">
+               <img src="<%=require('./blocks/common-blocks/location/images/facebook.svg').default%>" alt="Иконка фейсбука">
+             </a>
+           </li>
+           <li class="social-media__icon">
+             <img src="<%=require('./blocks/common-blocks/location/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
+           </li>
+         </ul>
+       </nav>
+      </div>
+    </aside>
      <main>
-         <section class="title-page">
-             <div class="title-page__container">
-                <h3 class="title-page__city">Санкт-Петербург</h3>
-                <h1 class="title-page__title">Котейка</h1>
-                <h2 class="title-page__subtitle">Уютная гостиница для котов и кошек</h2>
-                <button class="check-in-button check-in-button_place_title-page">
-                  <div class="check-in-button__container">
-                    <span class="check-in-button__text">Забронировать</span> 
-                    <img  class="check-in-button__paw-pic" src="<%=require('./blocks/common-blocks/check-in-button/images/paw.svg').default%>" alt="лапа кота">
-                  </div>
-                </button>
+        <section class="title-page">
+          <div class="title-page__container">
+            <h3 class="title-page__city">Санкт-Петербург</h3>
+            <h1 class="title-page__title">Котейка</h1>
+            <h2 class="title-page__subtitle">Уютная гостиница для котов и кошек</h2>
+            <button class="check-in-button check-in-button_size_small check-in-button-js">
+              <span class="check-in-button__text check-in-button__text_fz_medium check-in-button__text_color_base">Забронировать</span> 
+              <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_orange">
+                <use xlink:href="#paw"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+        <section class="benefits" id="benefits">
+          <div class="benefits__contanier">
+            <h2 class="title">Почему мы?</h2>
+            <div class="benefits__card-contanier">
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/thermometer.svg').default%>" alt="Иконка термометра">
+                <h3 class="benefit-card__title">Комфортная температура</h3>
+                <p class="benefit-card__text">
+                  Во всех номерах поддерживается комфортная температура в пределах 23 - 25 градусов.
+                  В каждом номере можно дополнительно отрегулировать температуру.
+                </p>
+              </div>
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/cctv.svg').default%>" alt="Иконка камеры наблюдения">
+                <h3 class="benefit-card__title">Видеонаблюдение</h3>
+                <p class="benefit-card__text">
+                  Мы предоставляем доступ в нашу систему.
+                  Вы сможете следить за своим питомцем со своего смартфона или компьютера.
+                </p>
+              </div>
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/taxi.svg').default%>" alt="Иконка такси">
+                <h3 class="benefit-card__title">Услуги Зоотакси</h3>
+                <p class="benefit-card__text">
+                  Мы приедем за вашим питомцем в любой район Санкт-Петербурга.
+                </p>
+              </div>
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/food.svg').default%>" alt="Иконка корма для кошек">
+                <h3 class="benefit-card__title">Сбалансированное питание</h3>
+                <p class="benefit-card__text">
+                  Вы можете привезти свой корм
+                  или доверить рацион своего
+                  питомца нашим профессионалам.
+                </p>
+              </div>
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/cat.svg').default%>" alt="Иконка кошки">
+                <h3 class="benefit-card__title">Ежедневные прогулки</h3>
+                <p class="benefit-card__text">
+                  По вашему желанию мы выгуливаем вашего питомца два раза в день
+                  на специализированной закрытой территории.
+                </p>
+              </div>
+              <div class="benefit-card">
+                <img class="benefit-card__img" src="<%=require('./blocks/main/benefit-card/images/vet.svg').default%>" alt="иконка ветеринарной службы">
+                <h3 class="benefit-card__title">Лучшие ветеринары</h3>
+                <p class="benefit-card__text">
+                  В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь
+                  в случае необходимости.
+                </p>
+              </div>
             </div>
-         </section>
-     </main>
- </div>
+          </div>
+        </section>
+        <section class="rooms">
+          <a class="link" href="./catalog.html">
+            <h2 class="title">Номера</h2>
+          </a>
+          <div class='rooms__slider'>
+            <div class="room-card room-card_type_sandwich">
+              <picture>
+                <source srcset="./blocks/common-blocks/room-card/images/cuteCat.jpg" media="(min-width: 600px)">
+                <!-- <img src="mdn-logo-narrow.png" alt="MDN"> -->
+               </picture>
+              <!-- <img class="room-card__img" src="<%=require('./blocks/common-blocks/room-card/images/cuteCat.jpg').default%>" alt="Кот в домике"> -->
+              <div class="room-card__container">
+                <h2 class="room-card__class">Эконом плюс</h2>
+                <ul class="room-card__info">
+                  <li class="room-card__parameter">Площадь &#8212; 0,9 м2</li>
+                  <li class="room-card__parameter">Размеры (ШхГхВ) 90х100х180 см</li>
+                  <li class="room-card__parameter">Цена за сутки: 200₽</li>
+                </ul>
+                <button class="check-in-button check-in-button_size_large check-in-button-js">
+                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                    <use xlink:href="#paw"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="room-card">
+              <img src="<%=require('./blocks/common-blocks/room-card/images/cuteCat2.jpg').default%>" alt="Кот в домике" class="room-card__img">
+              <div class="room-card__container">
+                <h2 class="room-card__class">Комфорт</h2>
+                <ul class="room-card__info">
+                  <li class="room-card__parameter">Площадь &#8212; 1,13 м2</li>
+                  <li class="room-card__parameter">Размеры (ШхГхВ) 100х125х180 см</li>
+                  <li class="room-card__parameter">Цена за сутки: 250₽</li>
+                </ul>
+                <button class="check-in-button check-in-button_size_large check-in-button-js">
+                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                    <use xlink:href="#paw"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="room-card">
+              <img src="<%=require('./blocks/common-blocks/room-card/images/cuteCat3.jpg').default%>" alt="Кот в домике" class="room-card__img">
+              <div class="room-card__container">
+                <h2 class="room-card__class">Сьют</h2>
+                <ul class="room-card__info">
+                  <li class="room-card__parameter">Площадь &#8212; 1,56 м2</li>
+                  <li class="room-card__parameter">Размеры (ШхГхВ) 125х125х180 см</li>
+                  <li class="room-card__parameter">Цена за сутки: 350₽</li>
+                </ul>
+                <button class="check-in-button check-in-button_size_large check-in-button-js">
+                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                    <use xlink:href="#paw"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <span>здесь кнопки слайдера</span>
+          </div>
+        </section>
+        <section class="feedback" id="feedback">
+          <h2 class="title">Отзывы</h2>
+          <div class="feedback__card">
+            <p class="feedback__text">
+              Первый раз пришлось оставить нашего котика в гостинице, очень переживали.
+              Администратор Мария каждый день высылала нам фото нашего питомца,
+              рассказывала, как он себя чувствует. И мы и котик остались очень довольны!
+            </p>
+          </div>
+        </section>
+        <section class="location" id="location">
+          <div class="location__container">
+            <h2 class="location__title">Как нас найти</h2>
+              <div class="location__item-container">
+                <h3 class="location__subtitle">Адрес</h3>
+                <span class="location__info">
+                  Санкт-Петербург, ул Большая Конюшенная, д 19
+                </span>
+              </div>
+              <div class="location__item-container">
+                <h3 class="location__subtitle">Режим работы</h3>
+                <span class="location__info">Ежедневно, с 9:00 до 20:00</span>
+              </div>
+              <div class="location__item-container">
+                <h3 class="location__subtitle">Телефон</h3>
+                <span class="location__info">8 (800) 333-55-99</span>
+              </div>
+              <div class="location__item-container">
+                <h3 class="location__subtitle">E-mail</h3>
+                <span class="location__info">info@cat-hotel.ru</span>
+              </div>
+            <nav class="social-media">
+              <h3 class="social-media__subtitle">Социальные сети</h3>
+              <ul class="social-media__icons">
+                <li class="social-media__icon">
+                  <a href="#">
+                    <img src="<%=require('./blocks/common-blocks/location/images/insta.svg').default%>" alt="Иконка инстаграма">
+                  </a>
+                </li>
+                <li class="social-media__icon">
+                  <a href="#">
+                    <img src="<%=require('./blocks/common-blocks/location/images/facebook.svg').default%>" alt="Иконка фейсбука">
+                  </a>
+                </li>
+                <li class="social-media__icon">
+                  <img src="<%=require('./blocks/common-blocks/location/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <section class="place">
+          <img class="place__map" src="<%=require('./blocks/common-blocks/place/images/map.jpg').default%>" alt="Скриншот карты">
+          <img class="place__point" src="<%=require('./blocks/common-blocks/place/images/cat-pointer.svg').default%>" alt="Указатель на карте">
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__menu-contanier">
+        <a class="link" href="index.html">
+          <img class="cat-logo cat-logo_place_footer" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
+        </a>
+        <nav class="menu menu_place_footer">
+          <ul class="menu__list menu__list_direction_columns">
+            <li class="menu__item menu__item_direction_columns"><a href="#benefits" class="link">Почему мы?</a></li>
+            <li class="menu__item menu__item_direction_columns"><a href="./catalog.html" class="link">Номера</a></li>
+            <li class="menu__item menu__item_direction_columns"><a href="#feedback" class="link">Отзывы</a></li>
+            <li class="menu__item menu__item_direction_columns"><a href="#location" class="link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright-container">
+          <span class="footer__text">&copy; 2019. Все права защищены</span>
+          <a class="link" href="#"><span class="footer__text">Политика конфедициальности</span></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Форма брони-->
+  <aside class="check-in-popup check-in-popup-js">
+    <div class="check-in-popup__container">
+      <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+      <h2 class="check-in-popup__title">Забронировать номер</h2>
+      <form action="#" class="check-in-popup__form" id="check-in-form">
+        <fieldset class="check-in-popup__fieldset check-in-popup__fieldset_part_guest">
+          <input class="check-in-popup__guest-input" type="text" placeholder="Ваше имя">
+          <input class="check-in-popup__guest-input" type="text" placeholder="Имя Питомца">
+          <input class="check-in-popup__guest-input" type="tel" placeholder="Телефон">
+          <input class="check-in-popup__guest-input" type="email" placeholder="E-mail">
+        </fieldset>
+        <fieldset class="check-in-popup__fieldset check-in-popup__fieldset_part_date">
+          <h3 class="check-in-popup__fieldset-title">Дата заезда</h3>
+          <label class="check-in-popup__label" for="dateFrom">с</label>
+          <input class="check-in-popup__date-input check-in-popup__date-input_pseudo_from" type="number" id="dateFrom" placeholder="20.05.20">
+          <label class="check-in-popup__label" for="dateTo">по</label>
+          <input class="check-in-popup__date-input check-in-popup__date-input_pseudo_to" type="number" id="dateTo" placeholder="25.05.20">
+        </fieldset>
+        <button class="check-in-button check-in-button_size_super-large check-in-button-form-js" form="check-in-form">
+          <span class="check-in-button__text check-in-button__text_fz_medium">Отправить заявку</span> 
+          <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+            <use xlink:href="#paw"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- забронировано-->
+  <aside class="popup-send popup-send-js">
+    <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+    <h2 class="popup-send__title">Спасибо за заявку</h2>
+    <span class="popup-send__text">Мы свяжемся с вами в ближайшее время</span>
+    <div class="popup-send__bttn-container">
+      <button class="check-in-button check-in-button_size_super-small check-in-button-send-js" form="check-in-form">
+        <span class="check-in-button__text check-in-button__text_fz_medium">Ок</span> 
+        <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+          <use xlink:href="#paw"></use>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="paw" viewBox="0 0 36 36">
+      <path fill="var(--color-1)" d="M36 18c0 4.808-1.872 9.328-5.272 12.728A17.884 17.884 0 0118.002 36H18a17.882 17.882 0 01-12.728-5.272C1.872 27.328 0 22.808 0 18S1.872 8.672 5.272 5.272C8.672 1.872 13.192 0 18 0h.002c4.807 0 9.327 1.873 12.726 5.272C34.128 8.672 36 13.192 36 18z" />
+      <path fill="var(--color-2)" d="M24.803 15.525c-2.964 1.7-2.46 6.662.756 6.662 1.387 0 2.587-1.042 3.122-2.375 1.234-3.078-1.333-5.748-3.878-4.287zM21.759 16.14c3.556 0 4.621-6.04 1.242-7.034-1.54-.452-3.29.633-3.852 2.617-.631 2.223.61 4.416 2.61 4.416z" />
+      <path fill="var(--color-2)" d="M20.844 26.89c-.494-.136-1.37-.224-2.289-.237-.97-.014-1.985.055-2.642.237-1.775.495-4.19-.701-3.66-3.186.49-2.296 2.251-2.165 2.668-4.341.42-2.2 2.05-3.261 3.634-3.179 1.467.077 2.895 1.135 3.284 3.179.414 2.178 2.171 2.046 2.66 4.341.532 2.487-1.888 3.676-3.655 3.186zM15.499 16.14c1.006 0 1.87-.585 2.35-1.48 1.427-2.659-.917-6.34-3.593-5.552-3.385.996-2.312 7.031 1.243 7.031z" />
+      <path fill="var(--color-2)" d="M13.89 20.21c1.143-2.794-1.564-6.208-4.15-5.134C6.627 16.37 8 21.95 11.425 21.95c1.099 0 2.033-.677 2.467-1.74zM20.844 26.89c-.494-.136-1.371-.224-2.289-.237V16.184c1.467.077 2.895 1.135 3.284 3.179.414 2.178 2.171 2.046 2.66 4.341.532 2.486-1.888 3.676-3.655 3.186z"/>
+    </symbol>
+  </svg>
  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.benefits {
+  padding-top: 70px;
+  background-image: url('../blocks/main/benefits/images/paw.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% + 42px) 37px;
+  background-color: variables.$block-backg;
+
+  @include mixins.for-tablet-up {
+    padding-top: 120px;
+    background-size: 300px 257px;
+    background-position: calc(100% + 82px) 0;
+  }
+
+  @include mixins.for-desktop-up {
+    padding-top: 140px;
+    background-size: 367px 314px;
+    background-position: calc(100% + 82px) 10px;
+  }
+
+  &__contanier {
+    @include mixins.centerBlock(variables.$mobile-width);
+    
+    @include mixins.for-tablet-up {
+      @include mixins.centerBlock(variables.$tablet-width);
+    }
+
+    @include mixins.for-desktop-up {
+      @include mixins.centerBlock(variables.$desktop-width);
+    }
+  }
+
+  &__card-contanier{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+
+    @include mixins.for-tablet-up {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mixins.for-desktop-up {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.rooms {
+  padding-top: 40px;
+  background-color: variables.$block-backg;
+  // @include mixins.centerBlock(variables.$mobile-width);
+
+
+  &__button-container {
+    @include mixins.centerBlock(variables.$mobile-width);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__cards-container {
+    
+  }
+}

@@ -3,7 +3,6 @@
 @use '../blocks/common-blocks/body/body';
 @use '../blocks/common-blocks/page-container/page-contanier';
 @use '../blocks/common-blocks/link/link';
-@use '../blocks/common-blocks/logo/logo';
 @use '../blocks/common-blocks/social-media/social-media';
 @use '../blocks/common-blocks/cat-logo/cat-logo';
 @use '../blocks/common-blocks/header/header';
@@ -15,14 +14,14 @@
 @use '../blocks/common-blocks/place/place';
 @use '../blocks/common-blocks/sidebar/sidebar';
 @use '../blocks/common-blocks/menu/menu';
-@use '../blocks/common-blocks/check-in-popup/check-in-popup';
 @use '../blocks/common-blocks/footer/footer';
 @use '../blocks/common-blocks/check-in-popup/check-in-popup';
 @use '../blocks/common-blocks/popup-send/popup-send';
 @use '../blocks/common-blocks/close-icon/close-icon';
 
-@use '../blocks/main/title-page/title-page';
-@use '../blocks/main/benefits/benefits';
-@use '../blocks/main/benefit-card/benefit-card';
-@use '../blocks/main/rooms/rooms';
-@use '../blocks/main/feedback/feedback';
+@use '../blocks/rooms-page/rooms/rooms';
+@use '../blocks/rooms-page/filter-bttn/filter-bttn';
+@use '../blocks/rooms-page/special/special';
+@use '../blocks/rooms-page/banner/banner';
+@use '../blocks/rooms-page/filter-menu/filter-menu';
+@use '../blocks/rooms-page/form-bttn/form-bttn';

@@ -1,0 +1,86 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.check-in-button {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: none;
+  outline: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 7px;
+  border-radius: variables.$bttn-brd-rad;
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      @include mixins.transperentBackg(black, 0.1, variables.$bttn-brd-rad)
+    } 
+  }
+
+  &_size_super-small {
+    padding-left: 34px;
+    background-color: variables.$bttn-back-orange;
+    width: 122px;
+  }
+
+  &_size_small {
+    padding-left: 30px;
+    background-color: variables.$bttn-back-white;
+    width: 206px;
+  }
+
+  &_size_medium {
+    padding-left: 58px;
+    background-color: variables.$bttn-back-orange;
+    width: 240px;
+  }
+
+  &_size_large {
+    padding-left: 49px;
+    background-color: variables.$bttn-back-orange;
+    width: 240px;
+  }
+
+  &_size_super-large {
+    padding-left: 47px;
+    background-color: variables.$bttn-back-orange;
+    width: 260px;
+  }
+
+  &__text {
+    font-family: "LatoWebMedium", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: variables.$white-text-color;
+
+    &_fz_medium {
+      font-size: 16px;
+    }
+
+    &_color_base {
+      color: variables.$base-text-color;
+    }
+  }
+
+  &__paw-icon {
+    width: 36px;
+    height: 36px;
+
+    &_type_orange {
+      --color-1: #ff7236;
+      --color-2: #fffefd;
+    }
+
+    &_type_white {
+      --color-1: #fffefd;
+      --color-2: #ff7236;
+    }
+  }
+}
+
+

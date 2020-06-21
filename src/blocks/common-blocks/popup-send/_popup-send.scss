@@ -1,0 +1,48 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.popup-send {
+  display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-image: url('../blocks/common-blocks/popup-send/images/paw.svg');
+  background-repeat: no-repeat;
+  background-position: -8px calc(100% + 9px) ;
+
+  @include mixins.centerBlock(variables.$mobile-width);
+  background-color: variables.$bttn-back-white;
+
+  padding-top: 20px;
+  padding-bottom: 60px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  &_show {
+    display: block;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "RubikBold", Arial, Helvetica, sans-serif;
+    color: variables.$base-text-color;
+  }
+
+  &__text {
+    display: block;
+    @include mixins.centerBlock(154px);
+
+    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  &__bttn-container {
+    @include mixins.centerBlock(122px);
+  }
+}

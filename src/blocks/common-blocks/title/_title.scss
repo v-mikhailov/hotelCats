@@ -1,0 +1,21 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'RubikBold';
+  font-size: 28px;
+  color: variables.$base-text-color;
+
+  @include mixins.for-tablet-up {
+    margin-bottom: 60px;
+    font-size: 36px;
+  }
+
+  @include mixins.for-desktop-up {
+    margin-bottom: 70px;
+    font-size: 36px;
+  }
+}

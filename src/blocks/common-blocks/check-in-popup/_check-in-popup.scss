@@ -1,0 +1,124 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.check-in-popup {
+  display: none;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  background-color: rgba(255, 254, 253, 0.6);
+  backdrop-filter: blur(8px);
+  overflow-y: scroll;
+
+  &_show {
+    display: block;
+  }
+
+  &__container {
+    @include mixins.centerBlock(variables.$mobile-width);
+    background-color: variables.$bttn-back-white;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    background-image: url(../blocks/common-blocks/check-in-popup/images/paw-upside-down.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "RubikBold", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: variables.$base-text-color;
+    width: 191px;
+    text-align: center;
+  }
+
+  &__form {
+    @include mixins.centerBlock(260px);
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &_part_guest {
+      margin-bottom: 20px;
+    }
+
+    &_part_date {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__guest-input {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+
+    border: 1px solid #D7D7D7;
+    border-radius: 25px;
+  
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: variables.$base-text-color;
+    background-color: variables.$bttn-back-white;
+
+    box-sizing: border-box;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__fieldset-title {
+    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: variables.$base-text-color;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &__date-input {
+    position: relative;
+    width: 107px;
+    padding-top: 20px;
+    padding-bottom: 21px;
+    border: 1px solid #D7D7D7;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background-color: variables.$bttn-back-white;
+    text-align: center;
+
+    &:first-of-type {
+      margin-right: 8px;
+    }
+  }
+
+  &__label {
+    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: variables.$base-text-color;
+  }
+
+}
+
+.test {
+  width: auto;
+}

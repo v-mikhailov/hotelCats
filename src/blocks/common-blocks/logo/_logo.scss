@@ -1,0 +1,13 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.logo {
+  width: 46px;
+  height: 38px;
+
+  @include mixins.for-tablet-up {
+    width: 63px;
+    height: 52px;
+  }
+
+}

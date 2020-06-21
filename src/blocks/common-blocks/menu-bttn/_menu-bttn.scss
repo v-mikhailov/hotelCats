@@ -1,0 +1,68 @@
+@use '../../../scss/variables.scss';
+@use '../../../scss/mixins.scss';
+
+.menu-bttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 12px;
+  width: 22px;
+  z-index: 99;
+
+  &__dash {
+    display: block;
+    position: relative;
+    width: 22px;
+    height: 2px;
+    background-color: variables.$base-text-color;
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+
+    // миксин для псевдо
+    &::after {
+      display: block;
+      position: absolute;
+      top: 5px;
+      content: "";
+      width: 22px;
+      height: 2px;
+      background-color: variables.$base-text-color;
+      border-radius: 20px;
+      transition: all 0.4s ease-in-out;
+    }
+  
+    &::before {
+      display: block;
+      position: absolute;
+      top: -5px;
+      content: "";
+      width: 22px;
+      height: 2px;
+      background-color: variables.$base-text-color;
+      border-radius: 20px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &.menu-bttn__dash_active {
+      background-color: transparent;
+      transition: all 0.2s linear;
+    }
+
+    &.menu-bttn__dash_active::before {
+      transform: rotate(45deg);
+      top: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &.menu-bttn__dash_active::after {
+      transform: rotate(-45deg);
+      top: 0;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  @include mixins.for-tablet-up {
+    display: none;
+  }
+}

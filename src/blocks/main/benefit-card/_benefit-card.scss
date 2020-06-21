@@ -1,0 +1,60 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.benefit-card {
+  min-width: 290px;
+  padding: 25px;
+  border-radius: variables.$benefit-card-brd-rad;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  @include mixins.for-tablet-up {
+    min-width: 250px;
+  }
+
+  @include mixins.for-desktop-up {
+    min-width: 238px;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+
+    @include mixins.for-tablet-up {
+      width: 75px;
+      height: 75px;
+    }
+    @include mixins.for-desktop-up {
+      width: 91px;
+      height: 91px;
+    }
+  }
+
+  &__title {
+    font-family: 'RubikMedium', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: variables.$base-text-color;
+
+    @include mixins.for-tablet-up {
+      font-size: 20px;
+    }
+
+    @include mixins.for-desktop-up {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
+    font-size: variables.$card-text-fz;
+    line-height: 140%;
+    color: variables.$base-text-color;
+
+    @include mixins.for-desktop-up {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.page-container {
+  position: relative;
+  display: flex;
+
+  min-width: 320px;
+  max-width: 1800px;
+  min-height: 519px;
+
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}

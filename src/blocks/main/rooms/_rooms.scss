@@ -1,0 +1,17 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.rooms {
+  background-color: variables.$block-backg;
+  padding-top: 70px;
+
+  background-image: url('../blocks/main/rooms/images/fish.svg');
+  background-repeat: no-repeat;
+  background-position: 0 115px;
+
+  @include mixins.for-desktop-up {
+    padding-top: 120px;
+    background-size: 339px 105px;
+  }
+
+}

@@ -1,0 +1,68 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.menu {
+  margin-bottom: 40px;
+
+  &_media_tablet-up {
+    display: none;
+
+    @include mixins.for-tablet-up {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  &_place_footer {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    min-height: 131px;
+    margin: 0;
+    padding-left: 0;
+    
+    &_direction_columns {
+      flex-wrap: wrap;
+      min-height: 0;
+      height: 44px;
+    }
+
+    &_direction_row {
+      @include mixins.for-tablet-up {
+        flex-direction: row;
+        min-height: 0;
+      }
+
+    }
+  }
+
+  &__item {
+    color: variables.$base-text-color;
+    font-family: 'RubikMedium', Arial, Helvetica, sans-serif;
+    font-size: variables.$card-title-fz;
+
+    &_direction_columns {
+      font-family: 'LatoWebMedium', Arial, Helvetica, sans-serif;
+      width: auto;
+      font-size: 16px;
+    }
+
+    &_direction_row {
+      font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
+      font-size: variables.$menu-tablet-fz;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  
+
+}

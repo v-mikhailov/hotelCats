@@ -1,0 +1,8 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.special {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: variables.$block-backg;
+}

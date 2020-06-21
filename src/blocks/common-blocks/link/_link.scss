@@ -1,0 +1,10 @@
+@use '../../../scss/variables';
+
+.link {
+  text-decoration: none;
+  color: variables.$base-text-color;
+  
+  &:hover {
+    color: variables.$hover-text-color;
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 519px;
+  padding-top: 12px;
+  background-color: variables.$block-backg2;
+  transition: right 1s ease-out;
+  z-index: 2;
+
+  &_animated {
+    right: 0;
+  }
+
+  &__container {
+    @include mixins.centerBlock(variables.$mobile-width);
+  }
+
+  &__tel {
+    display: block;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "build",
   "main": "index.js",
-  "homepage": "",
+  "homepage": "https://github.com/v-mikhailov/hotelCats",
   "scripts": {
     "build": "NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "NODE_ENV=development webpack-dev-server --mode development --watch",

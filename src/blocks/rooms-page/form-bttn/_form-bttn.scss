@@ -1,0 +1,24 @@
+@use '../../../scss/mixins';
+@use '../../../scss/variables';
+
+.form-bttn {
+  width: 240px;
+  height: 42px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &_type_fill {
+    background-color: variables.$form-bttn-backg;
+    border: none;
+  }
+
+  &_type_empty {
+    background-color: #FFFEFD;
+    border: 2px solid variables.$form-bttn-backg;
+  }
+
+}
