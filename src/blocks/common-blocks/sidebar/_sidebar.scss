@@ -8,7 +8,7 @@
   width: 320px;
   height: 519px;
   padding-top: 12px;
-  background-color: variables.$block-backg2;
+  background-color: variables.$background-color-yellow;
   transition: right 1s ease-out;
   z-index: 2;
 
@@ -22,8 +22,7 @@
 
   &__tel {
     display: block;
-    font-family: 'Rubik', Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-menu-s, variables.$font-weight-regular, variables.$text-color-base);
     margin-bottom: 25px;
   }
 }

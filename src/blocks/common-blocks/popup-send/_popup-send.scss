@@ -3,7 +3,6 @@
 
 .popup-send {
   display: none;
-
   position: fixed;
   top: 50%;
   left: 50%;
@@ -14,12 +13,24 @@
   background-position: -8px calc(100% + 9px) ;
 
   @include mixins.centerBlock(variables.$mobile-width);
-  background-color: variables.$bttn-back-white;
+  background-color: variables.$background-bttn-and-popup-elems-white;
 
   padding-top: 20px;
   padding-bottom: 60px;
-  border-radius: 10px;
+  border-radius: variables.$border-rad-popup;
   box-sizing: border-box;
+
+  @include mixins.for-tablet-up {
+    width: 502px;
+    padding-top: 25px;
+    padding-bottom: 43px;
+  }
+
+  &__close-icon-container {
+    display: flex;
+    width: calc(100% - 25px);
+    justify-content: flex-end;
+  }
 
   &_show {
     display: block;
@@ -29,17 +40,16 @@
     margin-top: 10px;
     margin-bottom: 20px;
     text-align: center;
-    font-family: "RubikBold", Arial, Helvetica, sans-serif;
-    color: variables.$base-text-color;
+
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-booking-popup-title, variables.$font-weight-bold, variables.$text-color-base);
   }
 
   &__text {
     display: block;
-    @include mixins.centerBlock(154px);
-
-    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
-    font-size: 16px;
     margin-bottom: 35px;
+    
+    @include mixins.centerBlock(154px);
+    @include mixins.text(variables.$font-family-lato, variables.$fz-booking-popup-title, variables.$font-weight-bold, variables.$text-color-base);
   }
 
   &__bttn-container {

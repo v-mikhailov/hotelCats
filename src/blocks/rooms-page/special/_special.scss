@@ -4,5 +4,10 @@
 .special {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: variables.$block-backg;
+  background-color: variables.$background-color-gray;
+
+  @include mixins.for-tablet-up {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }

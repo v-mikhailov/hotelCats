@@ -3,18 +3,67 @@
 
 .rooms {
   padding-top: 40px;
-  background-color: variables.$block-backg;
-  // @include mixins.centerBlock(variables.$mobile-width);
+  background-color: variables.$background-color-gray;
+  
+  @include mixins.for-tablet-up {
+    padding-top: 60px;
+  }
 
+  @include mixins.for-desktop-up {
+    background-color: variables.$background-color-contrast-gray;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__header-container {
+    @include mixins.for-tablet-up {
+      @include mixins.centerBlock(variables.$tablet-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    @include mixins.for-desktop-up {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 
   &__button-container {
     @include mixins.centerBlock(variables.$mobile-width);
+
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include mixins.for-tablet-up {
+      margin: 0;
+      width: 324px;
+    }
+  }
+
+  &__main-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__cards-container {
-    
+    @include mixins.centerBlock(290px);
+
+    @include mixins.for-tablet-down {
+      @include mixins.centerBlock(678px);
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mixins.for-desktop-up {
+       width: 880px;
+       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+       grid-gap: 20px;
+       place-items: center;
+   }
   }
 }

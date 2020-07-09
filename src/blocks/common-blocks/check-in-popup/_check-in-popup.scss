@@ -20,32 +20,55 @@
     display: block;
   }
 
+  &__close-icon-container {
+    display: flex;
+    width: calc(100% - 25px);
+    justify-content: flex-end;
+  }
+
   &__container {
     @include mixins.centerBlock(variables.$mobile-width);
-    background-color: variables.$bttn-back-white;
+    background-color: variables.$background-bttn-and-popup-elems-white;
     padding-top: 20px;
     padding-bottom: 60px;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: variables.$border-rad-popup;
 
     background-image: url(../blocks/common-blocks/check-in-popup/images/paw-upside-down.svg);
     background-repeat: no-repeat;
+
+    @include mixins.for-tablet-up {
+      width: 502px;
+      height: 629px;
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
   }
 
   &__title {
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-booking-popup-title, variables.$font-weight-bold, variables.$text-color-base);
+
     margin-top: 10px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    font-family: "RubikBold", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    color: variables.$base-text-color;
+
     width: 191px;
     text-align: center;
+
+    @include mixins.for-tablet-up {
+      margin-top: 0;
+      font-size: variables.$fz-booking-popup-title-talet-up;
+      width: auto;
+    }
   }
 
   &__form {
     @include mixins.centerBlock(260px);
+
+    @include mixins.for-tablet-up {
+      @include mixins.centerBlock(442px);
+    }
   }
 
   &__fieldset {
@@ -59,6 +82,10 @@
 
     &_part_date {
       margin-bottom: 35px;
+
+      @include mixins.for-tablet-up {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -68,18 +95,15 @@
     min-height: 52px;
 
     border: 1px solid #D7D7D7;
-    border-radius: 25px;
+    border-radius: variables.$border-rad-bttn;
   
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
 
-    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: variables.$base-text-color;
-    background-color: variables.$bttn-back-white;
-
+    @include mixins.text(variables.$font-family-lato, variables.$fz-booking-popup-text, variables.$font-weight-regular, variables.$text-color-base);
+    background-color: variables.$background-bttn-and-popup-elems-white;
     box-sizing: border-box;
 
     &:last-child {
@@ -88,37 +112,57 @@
   }
 
   &__fieldset-title {
-    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: variables.$base-text-color;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-booking-popup-text, variables.$font-weight-regular, variables.$text-color-base);
     margin-top: 0;
     margin-bottom: 15px;
+
+    @include mixins.for-tablet-up {
+      display: inline-block;
+      font-size: variables.$fz-booking-popup-text-tablet-up;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
   }
 
   &__date-input {
-    position: relative;
     width: 107px;
     padding-top: 20px;
     padding-bottom: 21px;
     border: 1px solid #D7D7D7;
-    border-radius: 25px;
+    border-radius: variables.$border-rad-bttn;
     box-sizing: border-box;
-    background-color: variables.$bttn-back-white;
+    background-color: variables.$background-bttn-and-popup-elems-white;
     text-align: center;
+
+    @include mixins.for-tablet-up {
+      width: 132px;
+    }
 
     &:first-of-type {
       margin-right: 8px;
+
+      @include mixins.for-tablet-up {
+        margin-right: 14px;
+      }
     }
+
   }
 
   &__label {
-    font-family: "LatoWeb", Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: variables.$base-text-color;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-booking-popup-text, variables.$font-weight-regular, variables.$text-color-base);
+
+    @include mixins.for-tablet-up {
+      font-size: variables.$fz-booking-popup-text-tablet-up;
+      margin-right: 10px;
+    }
   }
 
-}
+  &__bttn-container {
+    @include mixins.for-tablet-up {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
-.test {
-  width: auto;
 }

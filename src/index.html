@@ -14,7 +14,7 @@
   <div class="page-container">
     <header class="header">
       <div class="header__container">
-         <img class="logo" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
+         <img class="cat-logo" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
         <div class="menu-bttn">
           <div class="menu-bttn__dash"></div>
         </div>
@@ -50,16 +50,16 @@
          <ul class="social-media__icons">
            <li class="social-media__icon">
              <a href="#">
-               <img src="<%=require('./blocks/common-blocks/location/images/insta.svg').default%>" alt="Иконка инстаграма">
+               <img src="<%=require('./blocks/common-blocks/contacts/images/insta.svg').default%>" alt="Иконка инстаграма">
              </a>
            </li>
            <li class="social-media__icon">
              <a href="#">
-               <img src="<%=require('./blocks/common-blocks/location/images/facebook.svg').default%>" alt="Иконка фейсбука">
+               <img src="<%=require('./blocks/common-blocks/contacts/images/facebook.svg').default%>" alt="Иконка фейсбука">
              </a>
            </li>
            <li class="social-media__icon">
-             <img src="<%=require('./blocks/common-blocks/location/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
+             <img src="<%=require('./blocks/common-blocks/contacts/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
            </li>
          </ul>
        </nav>
@@ -138,119 +138,157 @@
           <a class="link" href="./catalog.html">
             <h2 class="title">Номера</h2>
           </a>
-          <div class='rooms__slider'>
-            <div class="room-card room-card_type_sandwich">
-              <picture>
-                <source srcset="./blocks/common-blocks/room-card/images/cuteCat.jpg" media="(min-width: 600px)">
-                <!-- <img src="mdn-logo-narrow.png" alt="MDN"> -->
-               </picture>
-              <!-- <img class="room-card__img" src="<%=require('./blocks/common-blocks/room-card/images/cuteCat.jpg').default%>" alt="Кот в домике"> -->
-              <div class="room-card__container">
-                <h2 class="room-card__class">Эконом плюс</h2>
-                <ul class="room-card__info">
-                  <li class="room-card__parameter">Площадь &#8212; 0,9 м2</li>
-                  <li class="room-card__parameter">Размеры (ШхГхВ) 90х100х180 см</li>
-                  <li class="room-card__parameter">Цена за сутки: 200₽</li>
-                </ul>
-                <button class="check-in-button check-in-button_size_large check-in-button-js">
-                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
-                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
-                    <use xlink:href="#paw"></use>
-                  </svg>
-                </button>
+          <div class='slider'>
+            <div class="room-card room-card_place_main-page">
+              <div class="room-card__sandwitch-container">
+                <picture class="room-card__img-container">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/cute-cat.jpg').default%>" media="(max-width: 767px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/cute-cat-tablet.jpg').default%>" media="(min-width: 768px) and (max-width: 1029px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/cute-cat-desktop.jpg').default%>" media="(min-width: 1030px)" alt="">
+                  <img class="room-card__img" src="<%=require('./blocks/common-blocks/room-card/images/cute-cat-desktop.jpg').default%>" alt="">
+                </picture>
+                <div class="room-card__info-container room-card__info-container_type_sandwich">
+                  <h2 class="room-card__title">Эконом плюс</h2>
+                  <ul class="room-card__parameters-list">
+                    <li class="room-card__parameter">Площадь - 0,90 м2</li>
+                    <li class="room-card__parameter">Размеры (ШхГхВ) - 90х100х180 см</li>
+                    <li class="room-card__parameter">Цена за сутки: 200₽</li>
+                  </ul>
+                  <button class="check-in-button check-in-button_size_large check-in-button-js">
+                    <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                    <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                      <use xlink:href="#paw"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="room-card">
-              <img src="<%=require('./blocks/common-blocks/room-card/images/cuteCat2.jpg').default%>" alt="Кот в домике" class="room-card__img">
-              <div class="room-card__container">
-                <h2 class="room-card__class">Комфорт</h2>
-                <ul class="room-card__info">
-                  <li class="room-card__parameter">Площадь &#8212; 1,13 м2</li>
-                  <li class="room-card__parameter">Размеры (ШхГхВ) 100х125х180 см</li>
-                  <li class="room-card__parameter">Цена за сутки: 250₽</li>
-                </ul>
-                <button class="check-in-button check-in-button_size_large check-in-button-js">
-                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
-                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
-                    <use xlink:href="#paw"></use>
-                  </svg>
-                </button>
+
+            <div class="room-card room-card_place_main-page">
+              <div class="room-card__sandwitch-container">
+                <picture class="room-card__img-container">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/comfort.jpg').default%>" media="(max-width: 767px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/comfort-slider-tablet.jpg').default%>" media="(min-width: 768px) and (max-width: 1029px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/comfort-slider-desktop.jpg').default%>" media="(min-width: 1030px)" alt="">
+                  <img class="room-card__img" src="<%=require('./blocks/common-blocks/room-card/images/comfort-desktop.jpg').default%>" alt="">
+                </picture>
+                <div class="room-card__info-container room-card__info-container_type_sandwich">
+                  <h2 class="room-card__title">Комфорт</h2>
+                  <ul class="room-card__parameters-list">
+                    <li class="room-card__parameter">Площадь - 1,13 м2</li>
+                    <li class="room-card__parameter">Размеры (ШхГхВ) - 100х125х180 см</li>
+                    <li class="room-card__parameter">Цена за сутки: 250₽</li>
+                  </ul>
+                  <button class="check-in-button check-in-button_size_large check-in-button-js">
+                    <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                    <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                      <use xlink:href="#paw"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="room-card">
-              <img src="<%=require('./blocks/common-blocks/room-card/images/cuteCat3.jpg').default%>" alt="Кот в домике" class="room-card__img">
-              <div class="room-card__container">
-                <h2 class="room-card__class">Сьют</h2>
-                <ul class="room-card__info">
-                  <li class="room-card__parameter">Площадь &#8212; 1,56 м2</li>
-                  <li class="room-card__parameter">Размеры (ШхГхВ) 125х125х180 см</li>
-                  <li class="room-card__parameter">Цена за сутки: 350₽</li>
-                </ul>
-                <button class="check-in-button check-in-button_size_large check-in-button-js">
-                  <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
-                  <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
-                    <use xlink:href="#paw"></use>
-                  </svg>
-                </button>
+
+            <div class="room-card room-card_place_main-page">
+              <div class="room-card__sandwitch-container">
+                <picture class="room-card__img-container">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/suite.jpg').default%>" media="(max-width: 767px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/suite-slider-tablet.jpg').default%>" media="(min-width: 768px) and (max-width: 1029px)" alt="">
+                  <source srcset="<%=require('./blocks/common-blocks/room-card/images/suite-slider-desktop.jpg').default%>" media="(min-width: 1030px)" alt=""> 
+                  <img class="room-card__img" src="<%=require('./blocks/common-blocks/room-card/images/lux-tablet.jpg').default%>" alt="">
+                </picture>
+                <div class="room-card__info-container room-card__info-container_type_sandwich">
+                  <h2 class="room-card__title">Сьют</h2>
+                  <ul class="room-card__parameters-list">
+                    <li class="room-card__parameter">Площадь - 1,56 м2</li>
+                    <li class="room-card__parameter">Размеры (ШхГхВ) - 125х125х180 см</li>
+                    <li class="room-card__parameter">Цена за сутки: 350₽</li>
+                  </ul>
+                  <button class="check-in-button check-in-button_size_large check-in-button-js">
+                    <span class="check-in-button__text check-in-button__text_fz_medium">Забронировать</span> 
+                    <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+                      <use xlink:href="#paw"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-            <span>здесь кнопки слайдера</span>
           </div>
         </section>
         <section class="feedback" id="feedback">
           <h2 class="title">Отзывы</h2>
-          <div class="feedback__card">
-            <p class="feedback__text">
-              Первый раз пришлось оставить нашего котика в гостинице, очень переживали.
-              Администратор Мария каждый день высылала нам фото нашего питомца,
-              рассказывала, как он себя чувствует. И мы и котик остались очень довольны!
-            </p>
+          <div class="slider slider_place_feedback">
+            <div class="feedback__card">
+              <p class="feedback__text">
+                Первый раз пришлось оставить нашего котика в гостинице, очень переживали.
+                Администратор Мария каждый день высылала нам фото нашего питомца,
+                рассказывала, как он себя чувствует. И мы и котик остались очень довольны!
+              </p> 
+            </div>
+            <div class="feedback__card">
+              <p class="feedback__text">
+                Первый раз пришлось оставить нашего котика в гостинице, очень переживали.
+                Администратор Мария каждый день высылала нам фото нашего питомца,
+                рассказывала, как он себя чувствует. И мы и котик остались очень довольны!
+              </p> 
+            </div>
+            <div class="feedback__card">
+              <p class="feedback__text">
+                Первый раз пришлось оставить нашего котика в гостинице, очень переживали.
+                Администратор Мария каждый день высылала нам фото нашего питомца,
+                рассказывала, как он себя чувствует. И мы и котик остались очень довольны!
+              </p> 
+            </div>
           </div>
         </section>
-        <section class="location" id="location">
-          <div class="location__container">
-            <h2 class="location__title">Как нас найти</h2>
-              <div class="location__item-container">
-                <h3 class="location__subtitle">Адрес</h3>
-                <span class="location__info">
+        <section class="contacts" id="location">
+          <div class="contacts__info">
+            <h2 class="contacts__title">Как нас найти</h2>
+              <div class="contacts__item-container">
+                <h3 class="contacts__subtitle">Адрес</h3>
+                <span class="contacts__text">
                   Санкт-Петербург, ул Большая Конюшенная, д 19
                 </span>
               </div>
-              <div class="location__item-container">
-                <h3 class="location__subtitle">Режим работы</h3>
-                <span class="location__info">Ежедневно, с 9:00 до 20:00</span>
+              <div class="contacts__item-container">
+                <h3 class="contacts__subtitle">Режим работы</h3>
+                <span class="contacts__text">Ежедневно, с 9:00 до 20:00</span>
               </div>
-              <div class="location__item-container">
-                <h3 class="location__subtitle">Телефон</h3>
-                <span class="location__info">8 (800) 333-55-99</span>
+              <div class="contacts__item-container">
+                <h3 class="contacts__subtitle">Телефон</h3>
+                <span class="contacts__text">8 (800) 333-55-99</span>
               </div>
-              <div class="location__item-container">
-                <h3 class="location__subtitle">E-mail</h3>
-                <span class="location__info">info@cat-hotel.ru</span>
+              <div class="contacts__item-container">
+                <h3 class="contacts__subtitle">E-mail</h3>
+                <span class="contacts__text">info@cat-hotel.ru</span>
               </div>
             <nav class="social-media">
               <h3 class="social-media__subtitle">Социальные сети</h3>
               <ul class="social-media__icons">
                 <li class="social-media__icon">
                   <a href="#">
-                    <img src="<%=require('./blocks/common-blocks/location/images/insta.svg').default%>" alt="Иконка инстаграма">
+                    <img src="<%=require('./blocks/common-blocks/contacts/images/insta.svg').default%>" alt="Иконка инстаграма">
                   </a>
                 </li>
                 <li class="social-media__icon">
                   <a href="#">
-                    <img src="<%=require('./blocks/common-blocks/location/images/facebook.svg').default%>" alt="Иконка фейсбука">
+                    <img src="<%=require('./blocks/common-blocks/contacts/images/facebook.svg').default%>" alt="Иконка фейсбука">
                   </a>
                 </li>
                 <li class="social-media__icon">
-                  <img src="<%=require('./blocks/common-blocks/location/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
+                  <img src="<%=require('./blocks/common-blocks/contacts/images/vk.svg').default%>" alt="Иконка 'Вконтакте'">
                 </li>
               </ul>
             </nav>
           </div>
-        </section>
-        <section class="place">
-          <img class="place__map" src="<%=require('./blocks/common-blocks/place/images/map.jpg').default%>" alt="Скриншот карты">
-          <img class="place__point" src="<%=require('./blocks/common-blocks/place/images/cat-pointer.svg').default%>" alt="Указатель на карте">
+          <div class="contacts__map">
+            <picture class="contacts__map-container">
+              <source srcset="<%=require('./blocks/common-blocks/contacts/images/map.jpg').default%>" media="(max-width: 599px)" alt="">
+                <source srcset="<%=require('./blocks/common-blocks/contacts/images/map-tablet.jpg').default%>" media="(min-width: 600px) and (max-width: 899px)" alt="">
+                <source srcset="<%=require('./blocks/common-blocks/contacts/images/map-desktop.jpg').default%>" media="(min-width: 900px)" alt="">
+                <img class="contacts__map-img" src="<%=require('./blocks/common-blocks/contacts/images/map-desktop.jpg').default%>" alt="">
+            </picture>
+          </div>
         </section>
     </main>
     <footer class="footer">
@@ -259,11 +297,11 @@
           <img class="cat-logo cat-logo_place_footer" src="<%=require('./blocks/common-blocks/header/images/cat-logo.svg').default%>" alt="логотоип отеля в виде кошки с подписью 'Котейка'">
         </a>
         <nav class="menu menu_place_footer">
-          <ul class="menu__list menu__list_direction_columns">
-            <li class="menu__item menu__item_direction_columns"><a href="#benefits" class="link">Почему мы?</a></li>
-            <li class="menu__item menu__item_direction_columns"><a href="./catalog.html" class="link">Номера</a></li>
-            <li class="menu__item menu__item_direction_columns"><a href="#feedback" class="link">Отзывы</a></li>
-            <li class="menu__item menu__item_direction_columns"><a href="#location" class="link">Контакты</a></li>
+          <ul class="menu__list menu__list_direction_columns menu__list_direction_row">
+            <li class="menu__item menu__item_direction_columns menu__item_direction_row"><a href="#benefits" class="link">Почему мы?</a></li>
+            <li class="menu__item menu__item_direction_columns menu__item_direction_row"><a href="./catalog.html" class="link">Номера</a></li>
+            <li class="menu__item menu__item_direction_columns menu__item_direction_row"><a href="#feedback" class="link">Отзывы</a></li>
+            <li class="menu__item menu__item_direction_columns menu__item_direction_row"><a href="#location" class="link">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -279,7 +317,9 @@
   <!-- Форма брони-->
   <aside class="check-in-popup check-in-popup-js">
     <div class="check-in-popup__container">
-      <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+      <div class="check-in-popup__close-icon-container">
+        <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+      </div>
       <h2 class="check-in-popup__title">Забронировать номер</h2>
       <form action="#" class="check-in-popup__form" id="check-in-form">
         <fieldset class="check-in-popup__fieldset check-in-popup__fieldset_part_guest">
@@ -295,19 +335,23 @@
           <label class="check-in-popup__label" for="dateTo">по</label>
           <input class="check-in-popup__date-input check-in-popup__date-input_pseudo_to" type="number" id="dateTo" placeholder="25.05.20">
         </fieldset>
-        <button class="check-in-button check-in-button_size_super-large check-in-button-form-js" form="check-in-form">
-          <span class="check-in-button__text check-in-button__text_fz_medium">Отправить заявку</span> 
-          <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
-            <use xlink:href="#paw"></use>
-          </svg>
-        </button>
+        <div class="check-in-popup__bttn-container">
+          <button class="check-in-button check-in-button_size_super-large check-in-button-form-js" form="check-in-form">
+            <span class="check-in-button__text check-in-button__text_fz_medium">Отправить заявку</span> 
+            <svg class="check-in-button__paw-icon check-in-button__paw-icon_type_white">
+              <use xlink:href="#paw"></use>
+            </svg>
+          </button>
+        </div>
       </form>
     </div>
   </aside>
 
   <!-- забронировано-->
   <aside class="popup-send popup-send-js">
-    <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+    <div class="popup-send__close-icon-container">
+      <img class="close-icon close-icon-js" src="<%=require('./blocks/common-blocks/close-icon/images/close.svg').default%>" alt="">
+    </div>
     <h2 class="popup-send__title">Спасибо за заявку</h2>
     <span class="popup-send__text">Мы свяжемся с вами в ближайшее время</span>
     <div class="popup-send__bttn-container">

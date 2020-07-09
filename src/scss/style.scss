@@ -1,9 +1,10 @@
 @use '../fonts/typo';
+@use '../../node_modules/flickity/dist/flickity.css';
 
 @use '../blocks/common-blocks/body/body';
+@use '../blocks/main/slider/slider';
 @use '../blocks/common-blocks/page-container/page-contanier';
 @use '../blocks/common-blocks/link/link';
-@use '../blocks/common-blocks/logo/logo';
 @use '../blocks/common-blocks/social-media/social-media';
 @use '../blocks/common-blocks/cat-logo/cat-logo';
 @use '../blocks/common-blocks/header/header';
@@ -11,8 +12,7 @@
 @use '../blocks/common-blocks/check-in-button/check-in-button';
 @use '../blocks/common-blocks/title/title';
 @use '../blocks/common-blocks/room-card/room-card';
-@use '../blocks/common-blocks/location/location';
-@use '../blocks/common-blocks/place/place';
+@use '../blocks/common-blocks/contacts/contacts';
 @use '../blocks/common-blocks/sidebar/sidebar';
 @use '../blocks/common-blocks/menu/menu';
 @use '../blocks/common-blocks/check-in-popup/check-in-popup';

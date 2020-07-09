@@ -2,9 +2,9 @@
 
 .link {
   text-decoration: none;
-  color: variables.$base-text-color;
+  color: variables.$text-color-base;
   
   &:hover {
-    color: variables.$hover-text-color;
+    color: variables.$text-color-hover;
   }
 }

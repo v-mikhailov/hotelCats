@@ -52,10 +52,3 @@ filterMenu.addEventListener('click', event => {
   }
 })
 
-// const sortBttn = document.querySelector('.js-sort-bttn');
-
-// sortBttn.addEventListener('click', event => {
-//   console.log(event.target);
-// })
-
-

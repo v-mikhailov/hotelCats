@@ -1,0 +1,15 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.slider {
+  @include mixins.centerBlock(variables.$mobile-width);
+  height: auto;
+
+  @include mixins.for-tablet-up {
+    @include mixins.centerBlock(variables.$tablet-width);
+  }
+
+  @include mixins.for-desktop-up {
+    @include mixins.centerBlock(variables.$desktop-width);
+  }
+}

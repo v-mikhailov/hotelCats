@@ -1,37 +1,81 @@
-$base-text-color: #1A212F; // основной текст
-$white-text-color: #FFFEFD; // белый текст в кнопке брони
-$hover-text-color: #E54D0B;
+// fonts
+$fz-title: 44px;
+$fz-subtitle-down: 16px;
+$fz-subtitle-up: 12px;
+$fz-title-tablet-up: 62px;
+$fz-subtitle-up-tablet-up: 14px;
+$fz-subtitle-down-tablet-up: 20px;
+
+$fz-section-title: 28px;
+$fz-section-text: 15px;
+$fz-section-title-tablet-up: 36px;
+
+$fz-card-title-s: 18px;
+$fz-card-title-m: 20px;
+$fz-card-text-s: 14px;
+$fz-card-text-m: 15px;
+$fz-card-title-m-desktop-up: 22px;
+$fz-card-text-m-desktop-up: 16px;
+
+$fz-menu-s: 16px;
+$fz-menu-m: 20px;
+
+$fz-filter-popup-text: 14px;
+$fz-filter-popup-title: 16px;
+
+$fz-booking-popup-text: 15px;
+$fz-booking-popup-title: 24px;
+$fz-booking-popup-title-talet-up: 28px;
+$fz-booking-popup-text-tablet-up: 16px;
+
+$fz-banner-title: 37px;
+$fz-banner-subtitle: 24px;
+$fz-banner-text: 15px;
+$fz-banner-subtitle-tablet-up: 36px;
+$fz-banner-title-tablet-up: 56px;
+
+$fz-button-text: 14px;
+$fz-button-text2: 16px;
+
+$fz-footer-text: 12px;
+
+$font-family-lato: 'LatoWeb', Arial, Helvetica, sans-serif;
+$font-family-rubik: 'Rubik', Arial, Helvetica, sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// colors
+$text-color-base: #1A212F;
+$text-color-hover: #E54D0B;
+$text-color-white: #FFFEFD; 
+$text-color-gray: #8F8F8F;
+
+$background-color-gray: #fbfaf9;
+$background-color-contrast-gray: #fdfcfb;
+$background-color-white: #FFF;
+$background-color-yellow: #FAC663;
+
+$background-bttn-and-popup-elems-white:  #FFFEFD;
+$background-bttn-orange: #FF7236;
+$background-form-bttn: #FAC663;
+$background-filter-bttn: #fff;
+
 $border-color: #EFEFEF;
 $footer-color: #8F8F8F;
 
-$block-backg: #fbfaf9; // фон секций
-$block-backg2: #FAC663;
-$card-backg: #FFF; // фон карточек
-$filter-bttn-backg: #fff;
+//border
+$border-rad-bttn: 25px;
+$border-rad-menu-dash: 20px;
+$border-rad-popup: 10px;
+$border-rad-card: 8px;
+$border-rad-card-s: 6px;
 
 
+// block width
 
-//кнопка брони
-$bttn-back-white: #FFFEFD; // белый фон для кнопки брони или иконки лапы / фон для фильр меню/попап
-$bttn-back-orange: #FF7236; // оранжевый фон для кнопки брони или иконки лапы
-$form-bttn-backg: #FAC663; // фон для кнопки формы
-$bttn-brd-rad: 25px; // радиус кнопки брони
-$base-fz: 18px;
-$card-title-fz: 20px;
-
-$card-text-fz: 15px;
-
-// 14пх для двух кнопок и брони на второй странице и формы
-// есть ещее 16пх в номере телефона для карточки и нижнего меню, заголовки фильр формы, текст в попап сенд
-// 12 пх для копирайта
-// 24px банер подзаголовко
-// 37пх хаголовк банер
-$benefit-card-brd-rad: 8px; // еще для карточкии отзывов
-
-
+//responsive mobile twidth
 $mobile-width: 90.6%;
 $tablet-width: 88.2%;
 $desktop-width: 85.9%;
-
-//tablet
-$menu-tablet-fz: 16px;

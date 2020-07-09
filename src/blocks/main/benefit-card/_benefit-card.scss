@@ -4,7 +4,7 @@
 .benefit-card {
   min-width: 290px;
   padding: 25px;
-  border-radius: variables.$benefit-card-brd-rad;
+  border-radius: variables.$border-rad-card;
   background-color: #fff;
   box-sizing: border-box;
 
@@ -30,31 +30,27 @@
   }
 
   &__title {
-    font-family: 'RubikMedium', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-card-title-s, variables.$font-weight-medium, variables.$text-color-base);
     margin-top: 0;
     margin-bottom: 20px;
-    color: variables.$base-text-color;
 
     @include mixins.for-tablet-up {
-      font-size: 20px;
+      font-size: variables.$fz-card-title-m;
     }
 
     @include mixins.for-desktop-up {
-      font-size: 22px;
+      font-size: variables.$fz-card-title-m-desktop-up;
     }
   }
 
   &__text {
+    @include mixins.text(variables.$font-family-lato, variables.$fz-card-text-m, variables.$font-weight-regular, variables.$text-color-base);
+    line-height: 140%;
     margin-top: 0;
     margin-bottom: 0;
-    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
-    font-size: variables.$card-text-fz;
-    line-height: 140%;
-    color: variables.$base-text-color;
 
     @include mixins.for-desktop-up {
-      font-size: 16px;
+      font-size: variables.$fz-card-text-m-desktop-up;
     }
   }
 }

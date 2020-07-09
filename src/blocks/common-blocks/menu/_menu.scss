@@ -15,6 +15,10 @@
 
   &_place_footer {
     margin-bottom: 30px;
+
+    @include mixins.for-tablet-up {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
@@ -30,6 +34,10 @@
       flex-wrap: wrap;
       min-height: 0;
       height: 44px;
+      @include mixins.for-tablet-up {
+        flex-wrap: nowrap;
+        height: auto;
+      }
     }
 
     &_direction_row {
@@ -42,19 +50,15 @@
   }
 
   &__item {
-    color: variables.$base-text-color;
-    font-family: 'RubikMedium', Arial, Helvetica, sans-serif;
-    font-size: variables.$card-title-fz;
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-menu-m, variables.$font-weight-medium, variables.$text-color-base);
 
     &_direction_columns {
-      font-family: 'LatoWebMedium', Arial, Helvetica, sans-serif;
+      @include mixins.text(variables.$font-family-lato, variables.$fz-menu-s, variables.$font-weight-medium, variables.$text-color-base);
       width: auto;
-      font-size: 16px;
     }
 
     &_direction_row {
-      font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
-      font-size: variables.$menu-tablet-fz;
+      @include mixins.text(variables.$font-family-lato, variables.$fz-menu-s, variables.$font-weight-regular, variables.$text-color-base);
       margin-right: 30px;
 
       &:last-child {

@@ -1,4 +1,14 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
 .cat-logo {
+  width: 46px;
+  height: 38px;
+
+  @include mixins.for-tablet-up {
+    width: 63px;
+    height: 52px;
+  }
 
   &_place_sidebar {
     margin-bottom: 50px;
@@ -6,5 +16,9 @@
 
   &_place_footer {
     margin-bottom: 25px;
+
+    @include mixins.for-tablet-up {
+      margin-bottom: 0;
+    }
   }
 }

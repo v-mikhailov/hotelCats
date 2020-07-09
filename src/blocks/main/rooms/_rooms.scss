@@ -2,7 +2,7 @@
 @use '../../../scss/mixins';
 
 .rooms {
-  background-color: variables.$block-backg;
+  background-color: variables.$background-color-gray;
   padding-top: 70px;
 
   background-image: url('../blocks/main/rooms/images/fish.svg');
@@ -13,5 +13,4 @@
     padding-top: 120px;
     background-size: 339px 105px;
   }
-
 }

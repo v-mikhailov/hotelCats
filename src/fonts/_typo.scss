@@ -3,43 +3,43 @@
   src: url('../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
        url('../fonts/Lato-Regular.woff') format('woff'); /* Modern Browsers */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: 'LatoWebMedium';
+  font-family: 'LatoWeb';
   src: url('../fonts/Lato-Medium.woff2') format('woff2'), /* Modern Browsers */
        url('../fonts/Lato-Medium.woff') format('woff'); /* Modern Browsers */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: 'LatoWebBold';
+  font-family: 'LatoWeb';
   src: url('../fonts/Lato-Bold.woff2') format('woff2'), /* Modern Browsers */
        url('../fonts/Lato-Bold.woff') format('woff'); /* Modern Browsers */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: "RubikMedium";
+  font-family: "Rubik";
   src: url("../fonts/Rubik-Medium.woff") format("woff"), /* Modern Browsers */
        url("../fonts/Rubik-Medium.woff2") format("woff2"); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: 'RubikBold';
+  font-family: 'Rubik';
   src: url('../fonts/Rubik-Bold.woff2') format('woff2'), /* Modern Browsers */
        url('../fonts/Rubik-Bold.woff') format('woff'); /* Modern Browsers */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
@@ -48,6 +48,6 @@
   src: url('../fonts/Rubik-Regular.woff2') format('woff2'), /* Modern Browsers */
        url('../fonts/Rubik-Regular.woff') format('woff'); /* Modern Browsers */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
 }

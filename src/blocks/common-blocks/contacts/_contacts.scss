@@ -1,0 +1,99 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: variables.$background-color-yellow;
+
+  @include mixins.for-tablet-up {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    @include mixins.for-tablet-up {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 45px;
+    }
+
+    @include mixins.for-desktop-up {
+      padding-top: 70px;
+      padding-bottom: 70px;
+      padding-left: 14.4%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-section-title, variables.$font-weight-bold, variables.$text-color-base);
+
+    @include mixins.for-tablet-up {
+      font-size: variables.$fz-section-title-tablet-up;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item-container {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-section-text, variables.$font-weight-bold, variables.$text-color-base);
+  }
+  
+  &__text {
+    @include mixins.text(variables.$font-family-lato, variables.$fz-section-text, variables.$font-weight-regular, variables.$text-color-base);
+    
+    @include mixins.for-tablet-up {
+      display: block;
+      max-width: 310px;
+    }
+  }
+
+  &__map {
+    @include mixins.for-tablet-up {
+      width: 52%;
+    }
+
+    @include mixins.for-desktop-up {
+      width: 58.4%;
+    }
+  }
+
+  &__map-container {
+    display: block;
+    width: 320px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mixins.for-tablet-up {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+
+  &__map-img {
+    width: 320px;
+    height: 300px;
+
+    @include mixins.for-tablet-up {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

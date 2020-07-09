@@ -2,20 +2,25 @@
 @use '../../../scss/mixins';
 
 .title {
+  @include mixins.text(variables.$font-family-rubik, variables.$fz-section-title, variables.$font-weight-bold, variables.$text-color-base);
+  text-align: center;
   margin-top: 0;
   margin-bottom: 40px;
-  text-align: center;
-  font-family: 'RubikBold';
-  font-size: 28px;
-  color: variables.$base-text-color;
 
   @include mixins.for-tablet-up {
     margin-bottom: 60px;
-    font-size: 36px;
+    font-size: variables.$fz-section-title-tablet-up;
   }
 
   @include mixins.for-desktop-up {
     margin-bottom: 70px;
-    font-size: 36px;
   }
+
+  &_margin_disabled {
+    @include mixins.for-tablet-up {
+      margin-bottom: 0;
+    }
+  }
+
+
 }

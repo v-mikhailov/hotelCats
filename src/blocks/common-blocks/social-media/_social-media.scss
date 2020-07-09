@@ -1,12 +1,12 @@
 @use '../../../scss/variables';
+@use '../../../scss/mixins';
 
 .social-media {
 
   &__subtitle {
     margin-top: 0;
     margin-bottom: 15px;
-    font-family: 'LatoWebBold', Arial, Helvetica, sans-serif;
-    font-size: variables.$card-text-fz;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-card-text-m, variables.$font-weight-bold, variables.$text-color-base);
 
     &_place_sidebar {
       display: none;

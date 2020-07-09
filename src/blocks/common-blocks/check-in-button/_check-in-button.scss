@@ -13,57 +13,74 @@
   padding-top: 7px;
   padding-bottom: 7px;
   padding-right: 7px;
-  border-radius: variables.$bttn-brd-rad;
+  border-radius: variables.$border-rad-bttn;
 
   &:hover {
     cursor: pointer;
 
     &::after {
-      @include mixins.transperentBackg(black, 0.1, variables.$bttn-brd-rad)
+      @include mixins.transperentBackg(black, 0.1, variables.$border-rad-bttn)
     } 
   }
 
   &_size_super-small {
     padding-left: 34px;
-    background-color: variables.$bttn-back-orange;
+    background-color: variables.$background-bttn-orange;
     width: 122px;
   }
 
   &_size_small {
     padding-left: 30px;
-    background-color: variables.$bttn-back-white;
+    background-color: variables.$background-bttn-and-popup-elems-white;
     width: 206px;
   }
 
   &_size_medium {
     padding-left: 58px;
-    background-color: variables.$bttn-back-orange;
+    background-color: variables.$background-bttn-orange;
     width: 240px;
+
+    @include mixins.for-tablet-up {
+      width: 274px;
+      padding-left: 75px;
+    }
+
+    @include mixins.for-desktop-up {
+      width: 230px;
+      padding-left: 51px;
+    }
   }
 
   &_size_large {
     padding-left: 49px;
-    background-color: variables.$bttn-back-orange;
+    background-color: variables.$background-bttn-orange;
     width: 240px;
+
+    @include mixins.for-desktop-up {
+      width: 206px;
+      padding-left: 30px;
+    }
   }
 
   &_size_super-large {
     padding-left: 47px;
-    background-color: variables.$bttn-back-orange;
+    background-color: variables.$background-bttn-orange;
     width: 260px;
+
+    @include mixins.for-tablet-up {
+      width: 230px;
+    }
   }
 
   &__text {
-    font-family: "LatoWebMedium", Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: variables.$white-text-color;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-button-text, variables.$font-weight-medium, variables.$text-color-white);
 
     &_fz_medium {
-      font-size: 16px;
+      font-size: variables.$fz-button-text2;
     }
 
     &_color_base {
-      color: variables.$base-text-color;
+      color: variables.$text-color-base;
     }
   }
 

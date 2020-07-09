@@ -3,8 +3,8 @@
 
 .filter-menu {
   display: none;
-  
   position: absolute;
+  
   top: 0px;
   left: 0px;
   padding-top: 97px;
@@ -14,17 +14,48 @@
   backdrop-filter: blur(8px);
   z-index: 99;
 
+  @include mixins.for-desktop-up {
+    display: block;
+    position: relative;
+    padding: 0;
+    background: none;
+    backdrop-filter: none;
+    z-index: 0;
+    width: auto;
+    height: auto;
+  }
+
   &_show {
     display: block;
+  }
+
+  &__close-icon-container {
+    display: flex;
+    width: calc(100% - 25px);
+    justify-content: flex-end;
+
+    @include mixins.for-desktop-up {
+      display: none;
+    }
   }
 
   &__form-container{
     @include mixins.centerBlock(variables.$mobile-width);
     padding-top: 20px;
     padding-bottom: 50px;
-    background-color: variables.$bttn-back-white;
-    border-radius: 6px;
+    background-color: variables.$background-bttn-and-popup-elems-white;
+    border-radius: variables.$border-rad-popup;
     box-sizing: border-box;
+
+    @include mixins.for-tablet-up {
+      width: 332px;
+    }
+
+    @include mixins.for-desktop-up {
+      width: 210px;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__form {
@@ -34,11 +65,9 @@
   }
 
   &__title {
+    @include mixins.text(variables.$font-family-lato, variables.$fz-filter-popup-title, variables.$font-weight-medium, variables.$text-color-base);
     margin-top: 0;
     margin-bottom: 20px;
-    font-family: 'LatoWebMedium', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: variables.$base-text-color;
   }
 
   &__fieldset {
@@ -72,6 +101,12 @@
     padding-left: 8px;
     padding-right: 8px;
     box-sizing: border-box;
+
+    @include mixins.for-desktop-up {
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 24px;
+    }
   }
 
   &__item {
@@ -92,8 +127,7 @@
   }
 
   &__label {
-    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    @include mixins.text(variables.$font-family-lato, variables.$fz-filter-popup-text, variables.$font-weight-regular, variables.$text-color-base);
   }
 
   &__bttn-container {

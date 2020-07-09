@@ -11,6 +11,14 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
 
+  @include mixins.for-tablet-up {
+    @include mixins.centerBlock(variables.$tablet-width);
+    height: 359px;
+    padding-top: 69px;
+    padding-left: 50px;
+    background-image: url('../blocks/rooms-page/banner/images/banner-tablet.jpg');
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -18,33 +26,51 @@
     width: 82.4%;
     margin-left: auto;
     margin-right: auto;
+
+    @include mixins.for-tablet-up {
+      align-items: flex-start;
+      width: 321px;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &__title {
-    font-family: 'RubikBold', Arial, Helvetica, sans-serif;
-    color: variables.$base-text-color;
-    // text-align: center;
+    @include mixins.text(variables.$font-family-rubik, variables.$fz-banner-title, variables.$font-weight-bold, variables.$text-color-base);
+
 
     &_fz_small {
+      font-size: variables.$fz-banner-subtitle;
       margin-top: 0;
       margin-bottom: 4px;
-      font-size: 24px;
+
+      @include mixins.for-tablet-up {
+        font-size: variables.$fz-banner-subtitle-tablet-up;
+        margin-bottom: 15px;
+      }
     }
 
     &_fz_medium {
       height: auto;
       margin-top: 0;
       margin-bottom: 20px;
-      font-size: 37px;
+
+      @include mixins.for-tablet-up {
+        font-size: variables.$fz-banner-title-tablet-up;
+        margin-bottom: 25px;
+      }
     }
   }
 
   &__text {
+    @include mixins.text(variables.$font-family-lato, variables.$fz-banner-text, variables.$font-weight-regular, variables.$text-color-base);
     margin-top: 0;
     margin-bottom: 30px;
-    font-family: 'LatoWeb', Arial, Helvetica, sans-serif;
-    font-size: variables.$card-text-fz;
-    color: variables.$base-text-color;
+    
+    @include mixins.for-tablet-up {
+      margin-bottom: 35px;
+      width: 239px;
+    }
   }
 
 

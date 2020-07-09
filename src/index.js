@@ -1,4 +1,17 @@
 import "./scss/style.scss";
+import Flickity from 'flickity';
+
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+  const flkty = new Flickity( slider, {
+    freeScroll: true,
+    cellAlign: 'left',
+    wrapAround: true,
+    contain: true
+  });
+})
+
 // тест кнопки
 const burgerDash = document.querySelector('.menu-bttn__dash')
 const burgerBttn = document.querySelector('.menu-bttn');

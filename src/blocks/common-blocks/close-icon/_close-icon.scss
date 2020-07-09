@@ -1,4 +1,12 @@
+@use '../../../scss/variables';
+@use '../../../scss/mixins';
+
 .close-icon{
-  margin-left: 256px;;
-  margin-bottom: 16px;
+  width: 14px;
+  height: 14px;
+
+  @include mixins.for-desktop-up {
+    width: 16px;
+    height: 16px;
+  }
 }

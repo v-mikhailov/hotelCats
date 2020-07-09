@@ -6,7 +6,7 @@
   background-image: url('../blocks/main/benefits/images/paw.png');
   background-repeat: no-repeat;
   background-position: calc(100% + 42px) 37px;
-  background-color: variables.$block-backg;
+  background-color: variables.$background-color-gray;
 
   @include mixins.for-tablet-up {
     padding-top: 120px;

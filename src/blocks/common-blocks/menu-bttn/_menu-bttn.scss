@@ -15,11 +15,10 @@
     position: relative;
     width: 22px;
     height: 2px;
-    background-color: variables.$base-text-color;
-    border-radius: 20px;
+    background-color: variables.$text-color-base;
+    border-radius: variables.$border-rad-menu-dash;
     transition: all 0.4s ease-in-out;
 
-    // миксин для псевдо
     &::after {
       display: block;
       position: absolute;
@@ -27,8 +26,8 @@
       content: "";
       width: 22px;
       height: 2px;
-      background-color: variables.$base-text-color;
-      border-radius: 20px;
+      background-color: variables.$text-color-base;
+      border-radius: variables.$border-rad-menu-dash;
       transition: all 0.4s ease-in-out;
     }
   
@@ -39,8 +38,8 @@
       content: "";
       width: 22px;
       height: 2px;
-      background-color: variables.$base-text-color;
-      border-radius: 20px;
+      background-color: variables.$text-color-base;
+      border-radius: variables.$border-rad-menu-dash;
       transition: all 0.4s ease-in-out;
     }
 
