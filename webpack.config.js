@@ -28,7 +28,7 @@ module.exports = {
         {
           loader: 'file-loader',
           options: {
-            name: 'images/[name].[ext]'
+            name: 'images/[name].[ext]',
           }
         },
         {
@@ -69,7 +69,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
