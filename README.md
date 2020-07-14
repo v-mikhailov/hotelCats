@@ -1,17 +1,10 @@
-## Webpack config
+## Верстка сайта гостинцы для кошек
+### Технологии
 ***
-v0.0.2
-## Возможности
+* html5
+* CSS3
+* Sass
+* Webpack
+### To Do
 ***
-* babel
-* PostCss
-* Autoprefixer
-* Hot reload
-* Gh-pages deploy
-## Локальный запуск
-***
-1. Склонировать репозиторий
-2.     npm install
-3. Запустить локальный сервер 
-
-       npm run dev
+* Сортировка номеров по заданным параметрам

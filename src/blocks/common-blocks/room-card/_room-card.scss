@@ -22,6 +22,7 @@
       @include mixins.for-tablet-down {
         width: 324px;
         margin-right: 0;
+        margin-bottom: 0;
       }
 
       @include mixins.for-desktop-up {
@@ -87,6 +88,11 @@
         padding-right: 100px;
         top: 60px;
       }
+    }
+
+    @include mixins.for-desktop-up {
+      padding-left: 17px;
+      padding-right: 17px;
     }
   }
 
